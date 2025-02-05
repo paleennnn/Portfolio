@@ -162,7 +162,7 @@
 	                <span class="number" data-number="120">0</span>
 	                <span>Project complete</span>
                 </p>
-                <p><a href="#" class="btn btn-primary py-3 px-3" onclick="showAlert()">Download CV</a></p>
+                <p><a href="#" class="btn btn-primary py-3 px-3" onclick="downloadFile()">Download CV</a></p>
               </div>
 	          </div>
 	        </div>
@@ -224,7 +224,7 @@
     		</div>
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5" onclick="showAlert()">Download CV</a></p>
+    				<p><a href="#" class="btn btn-primary py-4 px-5" onclick="downloadFile()">Download CV</a></p>
     			</div>
     		</div>
     	</div>
@@ -710,7 +710,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://instagram.com/biogantengg" target="_blank">paleennnn</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
@@ -738,8 +738,18 @@
   
   <script src="js/main.js"></script>
   <script>
+	function downloadFile() {
+            // Ganti 'file_url' dengan tautan file CV yang sebenarnya
+            var file_url = 'files/cv.pdf'; 
+            var link = document.createElement('a');
+            link.href = file_url;
+            link.download = 'CV-Febyan_Valentino.pdf'; // Nama file saat diunduh
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
 	function showAlert() {
-		alert("blm gue setting bro!! SABARRRRR");
+		alert("blm gue setting bro!");
 	}
 </script>
     
